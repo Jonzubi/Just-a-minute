@@ -1,10 +1,13 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager _gameManager;
     ScreenIdentifier[] _screenIdentifiers;
+
+    // PlayGame variables
+    double _timeStarted = 0;
+    bool _gameStarted = false;
 
     private void Awake() {
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
@@ -12,6 +15,11 @@ public class GameManager : MonoBehaviour
 
     private void Start() {
         SetActive(0);
+    }
+
+    private void Update() {
+        if (_gameStarted) 
+            _timeStarted += Time.deltaTime;
     }
     public static GameManager GetInstance {
         get {
@@ -28,5 +36,15 @@ public class GameManager : MonoBehaviour
         {
             screenIdentifier.SetActive(index);
         }
+    }
+
+    public void PlayGame() {
+        _gameStarted = true;
+        _timeStarted = 0;
+    }
+
+    public void JustAMinute() {
+        _gameStarted = false;
+        Debug.Log("Time since start: " + _timeStarted);
     }
 }
