@@ -266,7 +266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JUST A MINUTE!
+  m_text: JUST IN TIME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e21d9fa883341484f8393b51730ca170, type: 2}
   m_sharedMaterial: {fileID: -4918373443893110478, guid: e21d9fa883341484f8393b51730ca170, type: 2}
@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JUST A MINUTE!
+  m_text: JUST IN TIME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e21d9fa883341484f8393b51730ca170, type: 2}
   m_sharedMaterial: {fileID: -4918373443893110478, guid: e21d9fa883341484f8393b51730ca170, type: 2}
@@ -965,11 +965,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4996372047715319224, guid: a8fedbf9c9c4c46529e4f8f91744330c, type: 3}
       propertyPath: m_text
-      value: JUST A MINUTE!
+      value: JUST IN TIME!
       objectReference: {fileID: 0}
     - target: {fileID: 4996372047715319224, guid: a8fedbf9c9c4c46529e4f8f91744330c, type: 3}
       propertyPath: m_fontSize
-      value: 75
+      value: 54
       objectReference: {fileID: 0}
     - target: {fileID: 4996372047715319224, guid: a8fedbf9c9c4c46529e4f8f91744330c, type: 3}
       propertyPath: m_fontSizeBase
@@ -1075,10 +1075,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'When you press the botton PLAY in the Main menu, an invisible counter
-    will start from ZERO to ONE minute. In the SCREEN there will be a button called
-    "JUST A MINUTE!" that will stop the counter and show the actual time passed from
-    beginning of game. The goal is to be as close as possible from the MINUTE. '
+  m_text: When you press the botton PLAY in the Main menu and select a mode, an invisible
+    counter will start from ZERO to that modes time target. In the SCREEN there will
+    be a button called "JUST A MINUTE!" that will stop the counter and show the actual
+    time passed from beginning of game. The goal is to be JUST IN TIME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e21d9fa883341484f8393b51730ca170, type: 2}
   m_sharedMaterial: {fileID: -4918373443893110478, guid: e21d9fa883341484f8393b51730ca170, type: 2}
@@ -2354,22 +2354,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleFactor: 0.00005
---- !u!95 &2058486200
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058486197}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f40b52aa76c6e75418719871fc9795a4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
