@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager _gameManager;
     ScreenIdentifier[] _screenIdentifiers;
     ResultText _resultText;
+    Modes _mode;
 
     // PlayGame variables
     double _timeStarted = 0;
@@ -41,15 +42,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public Modes Mode {
+        get {
+            return _mode;
+        }
+        set {
+            _mode = value;
+        }
+    }
+
     public void PlayGame() {
         _gameStarted = true;
         _timeStarted = 0;
+        SetActive(EScreenIdentifier.PLAY);
     }
 
     public void JustAMinute() {
         _gameStarted = false;
         SetActive(EScreenIdentifier.RESULTS);
         _resultText.SetResult(_timeStarted);
-        Debug.Log("Time since start: " + _timeStarted);
     }
 }
