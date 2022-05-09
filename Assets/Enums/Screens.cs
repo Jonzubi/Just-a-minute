@@ -8,5 +8,6 @@ public enum EScreenIdentifier
     PLAY = 1,
     HOWTOPLAY = 2,
     RESULTS = 3,
-    MODES = 4
+    MODES = 4,
+    SCORES = 5,
 }

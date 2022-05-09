@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _gameManager;
     ScreenIdentifier[] _screenIdentifiers;
+    RecordLoader[] _recordLoaders;
     ResultText _resultText;
     Modes _mode;
 
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake() {
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
+        _recordLoaders = FindObjectsOfType<RecordLoader>();
         _resultText = FindObjectOfType<ResultText>();
     }
 
@@ -61,5 +63,9 @@ public class GameManager : MonoBehaviour
         _gameStarted = false;
         SetActive(EScreenIdentifier.RESULTS);
         _resultText.SetResult(_timeStarted);
+
+        foreach (var record in _recordLoaders) {
+            record.ReloadRecords();
+        }
     }
 }
