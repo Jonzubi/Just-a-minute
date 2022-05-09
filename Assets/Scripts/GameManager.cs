@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Advertisements;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager _gameManager;
     ScreenIdentifier[] _screenIdentifiers;
+    ResultText _resultText;
 
     // PlayGame variables
     double _timeStarted = 0;
@@ -11,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake() {
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
+        _resultText = FindObjectOfType<ResultText>();
     }
 
     private void Start() {
@@ -45,6 +48,8 @@ public class GameManager : MonoBehaviour
 
     public void JustAMinute() {
         _gameStarted = false;
+        SetActive(EScreenIdentifier.RESULTS);
+        _resultText.SetResult(_timeStarted);
         Debug.Log("Time since start: " + _timeStarted);
     }
 }
