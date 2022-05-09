@@ -2729,9 +2729,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: When you press the botton PLAY in the Main menu and select a mode, an invisible
-    counter will start from ZERO to that modes time target. In the SCREEN there will
-    be a button called "JUST A MINUTE!" that will stop the counter and show the actual
-    time passed from beginning of game. The goal is to be JUST IN TIME!
+    counter will start from ZERO to that mode's time target. In the SCREEN there
+    will be a button called "JUST IN TIME!" that will stop the counter and show the
+    actual time passed from beginning of game. The goal is to be JUST IN TIME!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e21d9fa883341484f8393b51730ca170, type: 2}
   m_sharedMaterial: {fileID: -4918373443893110478, guid: e21d9fa883341484f8393b51730ca170, type: 2}
