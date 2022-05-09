@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     bool _gameStarted = false;
 
     private void Awake() {
+        Application.targetFrameRate = 60;
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
         _recordLoaders = FindObjectsOfType<RecordLoader>();
         _resultText = FindObjectOfType<ResultText>();
