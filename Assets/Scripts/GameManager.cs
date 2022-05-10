@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.Advertisements;
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     RecordLoader[] _recordLoaders;
     ResultText _resultText;
     Modes _mode;
+    GooglePlayStatus _googlePlayStatus;
 
     // PlayGame variables
     double _timeStarted = 0;
@@ -15,13 +17,20 @@ public class GameManager : MonoBehaviour
 
     private void Awake() {
         Application.targetFrameRate = 60;
+
+        PlayGamesPlatform.DebugLogEnabled = true;
+        PlayGamesPlatform.Activate();
+
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
         _recordLoaders = FindObjectsOfType<RecordLoader>();
         _resultText = FindObjectOfType<ResultText>();
+        _googlePlayStatus = FindObjectOfType<GooglePlayStatus>();
     }
 
     private void Start() {
         SetActive(0);
+
+        SignInToGooglePlay();
     }
 
     private void Update() {
@@ -68,5 +77,11 @@ public class GameManager : MonoBehaviour
         foreach (var record in _recordLoaders) {
             record.ReloadRecords();
         }
+    }
+
+    public void SignInToGooglePlay() {
+        PlayGamesPlatform.Instance.Authenticate((success) => {
+            _googlePlayStatus.SetStatusText(SignInStatus.Success == success);
+        });
     }
 }
