@@ -21,10 +21,11 @@ public class ResultText : MonoBehaviour
         int targetSecs = (int)GameManager.GetInstance.Mode;
         _bestTime = Utilities.GetDouble(recordID);
         _time = time;
-        double difference = targetSecs - _time;
+        double difference = Math.Abs(targetSecs - _time);
         double bestDifference = Math.Abs(targetSecs - _bestTime);
         if (difference < bestDifference) {
             recordText.SetActive(true);
+            GooglePlayServices.Instance.PostRecord(difference);
             Utilities.SetDouble(recordID, _time);
             _bestTime = _time;
         }

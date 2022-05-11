@@ -7,11 +7,11 @@ public class GooglePlayStatus : MonoBehaviour
 
     private void Awake() {
         _text = GetComponent<TextMeshProUGUI>();
-        SetStatusText(false);
+        SetStatusText("Not connected");
     }
     
-    public void SetStatusText(bool isSignedIn)
+    public void SetStatusText(string message)
     {
-        _text.text = isSignedIn ? "Google Play: Connected" : "Google Play: Disconnected";
+        _text.text = message;
     }
 }
