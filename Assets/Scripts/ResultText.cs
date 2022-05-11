@@ -5,6 +5,15 @@ using TMPro;
 public class ResultText : MonoBehaviour
 {
     double _time, _bestTime;
+    [SerializeField] GameObject recordText;
+
+    private void Awake() {
+        recordText.SetActive(false);
+    }
+
+    public void DissapearRecordText() {
+        recordText.SetActive(false);
+    }
 
     public void SetResult(double time)
     {
@@ -15,6 +24,7 @@ public class ResultText : MonoBehaviour
         double difference = targetSecs - _time;
         double bestDifference = Math.Abs(targetSecs - _bestTime);
         if (difference < bestDifference) {
+            recordText.SetActive(true);
             Utilities.SetDouble(recordID, _time);
             _bestTime = _time;
         }

@@ -2,9 +2,9 @@
     "m_SelectedDeviceId": "034d62d00404",
     "m_SelectedPackage": {
         "deviceId": "034d62d00404",
-        "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 27881,
-        "exited": true
+        "name": "com.JustInTime",
+        "processId": 2340,
+        "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -31,6 +31,12 @@
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 27881,
             "exited": true
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 2340,
+            "exited": false
         }
     ],
     "m_Tags": {

@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
         _gameStarted = true;
         _timeStarted = 0;
         SetActive(EScreenIdentifier.PLAY);
+        _resultText.DissapearRecordText();
     }
 
     public void JustAMinute() {
