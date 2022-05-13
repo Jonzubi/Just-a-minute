@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     RecordLoader[] _recordLoaders;
     ResultText _resultText;
     Modes _mode;
+    Toast _toast;
 
     // PlayGame variables
     double _timeStarted = 0;
@@ -17,9 +18,12 @@ public class GameManager : MonoBehaviour
     private void Awake() {
         Application.targetFrameRate = 60;
 
+        _toast = FindObjectOfType<Toast>();
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
         _recordLoaders = FindObjectsOfType<RecordLoader>();
         _resultText = FindObjectOfType<ResultText>();
+
+        _toast.gameObject.SetActive(false);
     }
 
     private void Start() {
@@ -71,5 +75,9 @@ public class GameManager : MonoBehaviour
         foreach (var record in _recordLoaders) {
             record.ReloadRecords();
         }
+    }
+
+    public void ShowToast(string text) {
+        _toast.Show(text);
     }
 }
