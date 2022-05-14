@@ -14,7 +14,7 @@ public class GooglePlayServices : MonoBehaviour
 
     public static GooglePlayServices _googlePlayServices;
     GooglePlayStatus _googlePlayStatus;
-    public Dictionary<string, LeaderBoardEntry> LeaderBoardsData = new Dictionary<string, LeaderBoardEntry>();
+    public Dictionary<string, List<LeaderBoardEntry>> LeaderBoardsData = new Dictionary<string, List<LeaderBoardEntry>>();
 
     bool _imConnected = false;
 
@@ -78,13 +78,23 @@ public class GooglePlayServices : MonoBehaviour
             return;
         }
         Dictionary<string, string>.KeyCollection leaderBoardKeys = GooglePlayConstants.LeaderBoardTokens.Keys;
+        InitializeLeaderBoardData();
         foreach (string key in leaderBoardKeys) {
             Social.LoadScores(key, (scores) => {
                 foreach (var score in scores)
                 {
-                    LeaderBoardsData[key] = new LeaderBoardEntry { userId = score.userID, score = score.value };
+                    LeaderBoardsData[key].Add(new LeaderBoardEntry { userId = score.userID, score = score.value });
                 }
             });
+        }
+    }
+
+    void InitializeLeaderBoardData()
+    {
+        LeaderBoardsData = new Dictionary<string, List<LeaderBoardEntry>>();
+        foreach (var key in GooglePlayConstants.LeaderBoardTokens.Keys)
+        {
+            LeaderBoardsData[key] = new List<LeaderBoardEntry>();
         }
     }
 }
