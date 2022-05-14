@@ -1,66 +1,42 @@
 {
     "m_SelectedDeviceId": "034d62d00404",
     "m_SelectedPackage": {
-        "deviceId": "034d62d00404",
-        "name": "com.JustInTime",
-        "processId": 22140,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "034d62d00404",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 14912,
-            "exited": true
-        },
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 24259,
-            "exited": true
-        },
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 25814,
-            "exited": true
-        },
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 27881,
-            "exited": true
-        },
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.JustInTime",
-            "processId": 2340,
-            "exited": false
-        },
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.JustInTime",
-            "processId": 20918,
-            "exited": false
-        },
-        {
-            "deviceId": "034d62d00404",
             "name": "com.JustInTime",
             "processId": 28893,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "034d62d00404",
             "name": "com.JustInTime",
             "processId": 29692,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "034d62d00404",
             "name": "com.JustInTime",
             "processId": 22140,
-            "exited": false
+            "exited": true
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 25590,
+            "exited": true
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 3346,
+            "exited": true
         }
     ],
     "m_Tags": {
