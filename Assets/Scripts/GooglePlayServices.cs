@@ -17,7 +17,7 @@ public class GooglePlayServices : MonoBehaviour
     public Dictionary<string, List<LeaderBoardEntry>> LeaderBoardsData = new Dictionary<string, List<LeaderBoardEntry>>();
 
     bool _imConnected = false;
-
+    float factorDifferenciaPuntos = 1000000;
     private void Awake() {
         _googlePlayStatus = FindObjectOfType<GooglePlayStatus>();
 
@@ -59,12 +59,11 @@ public class GooglePlayServices : MonoBehaviour
             GameManager.GetInstance.ShowToast("You are not connected to Google Play");
             return;
         }
-        Social.ReportScore((long)difference, GooglePlayConstants.LeaderBoardTokens[GameManager.GetInstance.Mode.ToString()], (success) => {
+        long googlePoints = PasteDifferenceToGooglePlayPoints(difference);
+        Social.ReportScore(googlePoints, GooglePlayConstants.LeaderBoardTokens[GameManager.GetInstance.Mode.ToString()], (success) => {
             if (success) {
-                Debug.LogError("Post record success");
                 GameManager.GetInstance.ShowToast("Record posted successfully to GooglePlay");
             } else {
-                Debug.LogError("Failed to post record to GooglePlay");
                 GameManager.GetInstance.ShowToast("Record posting failed to GooglePlay");
             }
         });
@@ -96,5 +95,13 @@ public class GooglePlayServices : MonoBehaviour
         {
             LeaderBoardsData[key] = new List<LeaderBoardEntry>();
         }
+    }
+
+    public long PasteDifferenceToGooglePlayPoints(double difference)
+    {
+        long maxDifference = (long)((int)GameManager.GetInstance.Mode * factorDifferenciaPuntos);
+        long googlePoints = (long)(difference * factorDifferenciaPuntos);
+        googlePoints = maxDifference - googlePoints;
+        return googlePoints;
     }
 }

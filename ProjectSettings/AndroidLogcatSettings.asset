@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "034d62d00404",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "034d62d00404",
+        "name": "com.JustInTime",
+        "processId": 13292,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -37,6 +37,12 @@
             "name": "com.JustInTime",
             "processId": 3346,
             "exited": true
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 13292,
+            "exited": false
         }
     ],
     "m_Tags": {

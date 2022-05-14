@@ -25,7 +25,6 @@ public class ResultText : MonoBehaviour
         double bestDifference = Math.Abs(targetSecs - _bestTime);
         if (difference < bestDifference) {
             recordText.SetActive(true);
-            Debug.LogError("New record");
             GooglePlayServices.Instance.PostRecord(difference);
             Utilities.SetDouble(recordID, _time);
             _bestTime = _time;
