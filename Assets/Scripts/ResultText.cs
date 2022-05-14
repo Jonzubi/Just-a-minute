@@ -23,12 +23,13 @@ public class ResultText : MonoBehaviour
         _time = time;
         double difference = Math.Abs(targetSecs - _time);
         double bestDifference = Math.Abs(targetSecs - _bestTime);
+        long googlePoints = GooglePlayServices.Instance.PasteDifferenceToGooglePlayPoints(difference);
         if (difference < bestDifference) {
             recordText.SetActive(true);
             GooglePlayServices.Instance.PostRecord(difference);
             Utilities.SetDouble(recordID, _time);
             _bestTime = _time;
         }
-        GetComponent<TextMeshProUGUI>().text = $"Your time: {_time}s\n\nBest time: {_bestTime}s";
+        GetComponent<TextMeshProUGUI>().text = $"Your time: {_time}s\nBest difference: {bestDifference}s\nPoints: {googlePoints}";
     }
 }
