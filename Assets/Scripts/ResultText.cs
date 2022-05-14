@@ -31,5 +31,6 @@ public class ResultText : MonoBehaviour
             _bestTime = _time;
         }
         GetComponent<TextMeshProUGUI>().text = $"Your time: {_time}s\nBest difference: {bestDifference}s\nPoints: {googlePoints}";
+        UnityAdsService.GetInstance.HandleAd();
     }
 }

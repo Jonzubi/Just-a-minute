@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "034d62d00404",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "034d62d00404",
+        "name": "com.JustInTime",
+        "processId": 7254,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -37,6 +37,24 @@
             "name": "com.JustInTime",
             "processId": 13292,
             "exited": true
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.miui.home",
+            "processId": 2051,
+            "exited": false
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 2121,
+            "exited": false
+        },
+        {
+            "deviceId": "034d62d00404",
+            "name": "com.JustInTime",
+            "processId": 7254,
+            "exited": false
         }
     ],
     "m_Tags": {

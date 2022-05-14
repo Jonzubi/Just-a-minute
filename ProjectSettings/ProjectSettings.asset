@@ -736,6 +736,12 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Analytics: 0
+    Build: 0
+    Collab: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     Unity Ads: 1
   luminIcon:
     m_Name: 
@@ -750,10 +756,10 @@ PlayerSettings:
     m_VersionName: 
   apiCompatibilityLevel: 6
   activeInputHandler: 0
-  cloudProjectId: 32e20013-d736-468f-84b1-b91b5c992e2c
+  cloudProjectId: 7d7b012c-95e8-4c32-97c9-4a05ee1a8e7c
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Just a minute!
+  projectName: Just in time!
   organizationId: jonzubi97
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
