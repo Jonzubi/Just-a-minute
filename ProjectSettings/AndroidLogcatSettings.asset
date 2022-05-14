@@ -1,19 +1,13 @@
 {
     "m_SelectedDeviceId": "034d62d00404",
     "m_SelectedPackage": {
-        "deviceId": "034d62d00404",
-        "name": "com.JustInTime",
-        "processId": 13292,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "034d62d00404",
-            "name": "com.JustInTime",
-            "processId": 28893,
-            "exited": true
-        },
         {
             "deviceId": "034d62d00404",
             "name": "com.JustInTime",
@@ -42,7 +36,7 @@
             "deviceId": "034d62d00404",
             "name": "com.JustInTime",
             "processId": 13292,
-            "exited": false
+            "exited": true
         }
     ],
     "m_Tags": {
