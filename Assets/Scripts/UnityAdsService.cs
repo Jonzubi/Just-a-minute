@@ -10,7 +10,7 @@ public class UnityAdsService : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSh
     public bool testmode = true;
     string adId = "Interstitial_Android";
     int partidasSinAd = 0;
-    int showAdCada = 1;
+    int showAdCada = 2;
 
     private void Start() {
         Advertisement.Initialize(androidId, testmode);
