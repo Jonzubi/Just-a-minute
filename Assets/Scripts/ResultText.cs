@@ -29,6 +29,7 @@ public class ResultText : MonoBehaviour
             GooglePlayServices.Instance.PostRecord(difference);
             Utilities.SetDouble(recordID, _time);
             _bestTime = _time;
+            bestDifference = difference;
         }
         GetComponent<TextMeshProUGUI>().text = $"Your time: {_time}s\nBest difference: {bestDifference}s\nPoints: {googlePoints}";
         UnityAdsService.GetInstance.HandleAd();
