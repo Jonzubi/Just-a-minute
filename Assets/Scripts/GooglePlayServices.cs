@@ -130,4 +130,10 @@ public class GooglePlayServices : MonoBehaviour
         googlePoints = maxDifference - googlePoints;
         return googlePoints;
     }
+    
+    public bool ImConnected {
+        get {
+            return _imConnected;
+        }
+    }
 }
