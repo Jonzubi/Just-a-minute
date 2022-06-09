@@ -18,6 +18,8 @@ public class GooglePlayServices : MonoBehaviour
 
     bool _imConnected = false;
     float factorDifferenciaPuntos = 1000000;
+    const float AuthenticationWaitTimeSeconds = 10;
+
     private void Awake() {
         _googlePlayStatus = FindObjectOfType<GooglePlayStatus>();
 
@@ -44,12 +46,36 @@ public class GooglePlayServices : MonoBehaviour
             if (success == SignInStatus.Success) {
                 _imConnected = true;
                 GameManager.GetInstance.ShowToast("Connected to Google Play");
-            } else if(success == SignInStatus.Canceled) {
-                GameManager.GetInstance.ShowToast("Google Play sign in canceled");
-            } else {
-                GameManager.GetInstance.ShowToast("Google Play sign in failed");
-            }
+                return;
+            }            
+            StartCoroutine(WaitForAuthentication());
         });
+    }
+
+    private IEnumerator WaitForAuthentication()
+    {
+        var startTime = Time.realtimeSinceStartup;
+
+        while (!Social.localUser.authenticated)
+        {
+            if (Time.realtimeSinceStartup - startTime > AuthenticationWaitTimeSeconds)
+            {
+                // X seconds have passed and we are still not authenticated, time to give up.
+                break;
+            }
+
+            yield return null;
+        }
+
+        if (Social.localUser.authenticated)
+        {
+            _imConnected = true;
+            GameManager.GetInstance.ShowToast("Connected to Google Play");
+        }
+        else
+        {
+            GameManager.GetInstance.ShowToast("Google Play sign in failed");
+        }
     }
 
     // Post record in Google Leaderboard

@@ -74,3 +74,10 @@ ProjectSettings/AndroidLogcatSettings.asset
 *.zip
 ProjectSettings/AndroidLogcatSettings.asset
 *.DISABLED
+Assets/Plugins/Android/proguard-user.txt.DISABLED.meta
+Assets/Plugins/Android/mainTemplate.gradle.DISABLED.meta
+Assets/Plugins/Android/launcherTemplate.gradle.DISABLED.meta
+Assets/Plugins/Android/LauncherManifest.xml.DISABLED.meta
+Assets/Plugins/Android/gradleTemplate.properties.DISABLED.meta
+Assets/Plugins/Android/baseProjectTemplate.gradle.DISABLED.meta
+Assets/Plugins/Android/AndroidManifest.xml.DISABLED.meta
