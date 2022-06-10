@@ -81,3 +81,4 @@ Assets/Plugins/Android/LauncherManifest.xml.DISABLED.meta
 Assets/Plugins/Android/gradleTemplate.properties.DISABLED.meta
 Assets/Plugins/Android/baseProjectTemplate.gradle.DISABLED.meta
 Assets/Plugins/Android/AndroidManifest.xml.DISABLED.meta
+*.so
