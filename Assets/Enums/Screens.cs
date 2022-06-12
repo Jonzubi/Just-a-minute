@@ -10,4 +10,5 @@ public enum EScreenIdentifier
     RESULTS = 3,
     MODES = 4,
     SCORES = 5,
+    BEFORE_PLAY = 6,
 }

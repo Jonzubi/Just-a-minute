@@ -8,6 +8,6 @@ public class ModeChooser : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         GameManager.GetInstance.Mode = mode;
-        GameManager.GetInstance.PlayGame();
+        GameManager.GetInstance.BeforePlayGame();
     }
 }

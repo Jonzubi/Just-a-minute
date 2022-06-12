@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     ResultText _resultText;
     Modes _mode;
     Toast _toast;
+    BeforePlayCounter _beforePlayCounter;
 
     // PlayGame variables
     double _timeStarted = 0;
@@ -22,6 +23,7 @@ public class GameManager : MonoBehaviour
         _screenIdentifiers = FindObjectsOfType<ScreenIdentifier>();
         _recordLoaders = FindObjectsOfType<RecordLoader>();
         _resultText = FindObjectOfType<ResultText>();
+        _beforePlayCounter = FindObjectOfType<BeforePlayCounter>();
 
         _toast.gameObject.SetActive(false);
     }
@@ -65,6 +67,11 @@ public class GameManager : MonoBehaviour
         _timeStarted = 0;
         SetActive(EScreenIdentifier.PLAY);
         _resultText.DissapearRecordText();
+    }
+
+    public void BeforePlayGame() {
+        SetActive(EScreenIdentifier.BEFORE_PLAY);
+        _beforePlayCounter.StartCounter();
     }
 
     public void JustAMinute() {
